@@ -4,6 +4,7 @@ import { QuoteModule } from "./external/quote/quote.module";
 import { TypeOrmModule } from "@nestjs/typeorm";
 import { databaseConfig } from "./config/database.config";
 import { environmentConfig } from "./config/environment.config";
+import { AuthModule } from "./auth/auth.modules";
 
 @Module({
   imports: [
@@ -27,6 +28,7 @@ import { environmentConfig } from "./config/environment.config";
         logging: configService.get("database.logging"),
       }),
     }),
+    AuthModule,
     QuoteModule,
   ],
 })
