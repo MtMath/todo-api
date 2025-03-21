@@ -25,11 +25,21 @@ export class TransformInterceptor<T>
     const response = ctx.getResponse();
 
     return next.handle().pipe(
-      map((data) => ({
-        data,
-        statusCode: response.statusCode,
-        message: data.message || "Success",
-      }))
+      map((data) => {
+        if (data === undefined || data === null) {
+          return {
+            data: null,
+            statusCode: response.statusCode,
+            message: "Success",
+          };
+        }
+
+        return {
+          data,
+          statusCode: response.statusCode,
+          message: data.message || "Success",
+        };
+      })
     );
   }
 }
