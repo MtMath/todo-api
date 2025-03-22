@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/MtMath/todo-api/compare/v1.0.0...v1.0.1) (2025-03-22)
+
+
+### Bug Fixes
+
+* allow * origin in cors ([dde0cfb](https://github.com/MtMath/todo-api/commit/dde0cfb4529322a94b6fd9eae6554930eb99e321))
+
 # 1.0.0 (2025-03-22)
 
 
