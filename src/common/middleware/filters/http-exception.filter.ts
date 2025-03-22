@@ -31,14 +31,12 @@ export class HttpExceptionFilter implements ExceptionFilter {
     if (status === HttpStatus.INTERNAL_SERVER_ERROR) {
       this.logger.error(
         `${request.method} ${request.url}`,
-        exception.stack,
-        "ExceptionFilter"
+        exception.stack
       );
     } else {
       this.logger.error(
         `${request.method} ${request.url}`,
-        JSON.stringify(errorResponse),
-        "ExceptionFilter"
+        JSON.stringify(errorResponse)
       );
     }
 

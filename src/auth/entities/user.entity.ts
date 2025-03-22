@@ -8,6 +8,7 @@ import {
 } from "typeorm";
 import { Exclude } from "class-transformer";
 import { Task } from "@app/tasks/entities/task.entity";
+import { TaskList } from "@app/tasks/entities/task-list.entity";
 
 @Entity("users")
 export class User {
@@ -35,4 +36,7 @@ export class User {
 
   @OneToMany(() => Task, (task) => task.user)
   tasks!: Task[];
+
+  @OneToMany(() => TaskList, taskList => taskList.user)
+  taskLists!: TaskList[];
 }

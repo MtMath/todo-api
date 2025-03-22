@@ -5,6 +5,7 @@ import { TypeOrmModule } from "@nestjs/typeorm";
 import { databaseConfig } from "./config/database.config";
 import { environmentConfig } from "./config/environment.config";
 import { AuthModule } from "./auth/auth.modules";
+import { TasksModule } from "./tasks/tasks.module";
 
 @Module({
   imports: [
@@ -29,6 +30,7 @@ import { AuthModule } from "./auth/auth.modules";
       }),
     }),
     AuthModule,
+    TasksModule,
     QuoteModule,
   ],
 })
