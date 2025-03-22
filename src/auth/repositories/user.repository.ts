@@ -17,18 +17,15 @@ export class UserRepository extends Repository<User> {
   async createUser(registerDto: RegisterDto): Promise<User> {
     const { username, email, password } = registerDto;
 
-    // Hash the password
     const salt = await bcrypt.genSalt();
     const hashedPassword = await bcrypt.hash(password, salt);
 
-    // Create a new user
     const user = this.create({
       username,
       email,
       password: hashedPassword,
     });
 
-    // Save the user to the database
     await this.save(user);
 
     return user;
