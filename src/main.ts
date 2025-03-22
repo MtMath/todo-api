@@ -16,7 +16,11 @@ async function bootstrap() {
     defaultVersion: "1",
   });
 
-  app.enableCors();
+  app.enableCors({
+    origin: "*",
+    credential: true,
+    preflightContinue: false,
+  });
 
   app.useGlobalPipes(
     new ValidationPipe({
