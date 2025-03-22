@@ -96,8 +96,8 @@ http://localhost:3000/api/docs
 
 - `POST /api/auth/register` - Register a new user
 - `POST /api/auth/login` - Login with username/email and password
-- `POST /api/auth/refresh-token` - Get a new access token
-- `POST /api/auth/logout` - Logout and invalidate refresh token
+- `POST /api/auth/refresh-token` - Get a new access token ( future )
+- `POST /api/auth/logout` - Logout and invalidate refresh token ( future )
 - `POST /api/auth/verify-email` - Verify email address ( future )
 - `POST /api/auth/google` - Login with Google ( future )
 
