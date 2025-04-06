@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/MtMath/todo-api/compare/v1.0.1...v1.0.2) (2025-04-06)
+
+
+### Bug Fixes
+
+* **ci:** lock file on Dockerfile workspace ([2791090](https://github.com/MtMath/todo-api/commit/2791090a56ebe03ccb8ae1523c06c47225255288))
+
 ## [1.0.1](https://github.com/MtMath/todo-api/compare/v1.0.0...v1.0.1) (2025-03-22)
 
 
